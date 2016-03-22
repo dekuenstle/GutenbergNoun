@@ -6,7 +6,7 @@ dataDir <- prepareData()
 taggerDir <- prepareTagger()
 
 removeDisclaimer <- function(x) {
-    pattern <- "\\*\\*\\* START: FULL LICENSE \\*\\*\\*"
+    pattern <- "\\*\\*\\* END OF THE PROJECT GUTENBERG EBOOK.*"
     i <- min(length(x),grep(pattern, x) - 1)
     x[1:i]
 }
